@@ -30,7 +30,7 @@ export default function Projects() {
 
       {/* Categories Filter Tabs */}
       <div className="projects-filters">
-        {["All", "MERN Stack", "Machine Learning / NLP"].map((cat) => (
+        {["All", "MERN Stack", "Machine Learning / NLP", "Frontend"].map((cat) => (
           <button
             key={cat}
             className={`filter-btn clickable ${filter === cat ? "active" : ""}`}

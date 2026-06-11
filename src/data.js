@@ -137,6 +137,21 @@ export const projectsData = [
     tech: ["Python", "spaCy", "NLP", "Flask", "Tailwind CSS"],
     demoLink: "https://resume-checker-q80h.onrender.com",
     codeLink: "https://github.com/PiyushPatil2105/resume-checker"
+  },
+  {
+    id: 4,
+    title: "Developer Portfolio & Resume",
+    category: "Frontend",
+    shortDescription: "Premium interactive developer portfolio website with a print-optimized PDF resume.",
+    fullDescription: "Built a custom, responsive developer portfolio featuring particle physics, a theme customizer, and custom cursors. Includes a print-optimized interactive HTML resume template compile-ready for single-page PDF exporting.",
+    features: [
+      "Headless Chromium PDF printing pipeline suppressing browser margins",
+      "Dynamic theme panels and custom fluid mouse physics",
+      "Interactive credentials verification linking to hosted public assets"
+    ],
+    tech: ["React", "Vite", "Framer Motion", "CSS3", "Headless Chrome"],
+    demoLink: "https://portfolio-eta-nine-10wun0jnrm.vercel.app/",
+    codeLink: "https://github.com/PiyushPatil2105/portfolio"
   }
 ];
 
