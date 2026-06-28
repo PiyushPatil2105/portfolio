@@ -46,10 +46,7 @@ export default function Projects() {
       <motion.div className="project-grid" layout>
         <AnimatePresence mode="popLayout">
           {filteredProjects.map((project) => (
-            <motion.a
-              href={project.demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
               className="project-card clickable"
               key={project.id}
               layout
@@ -57,7 +54,15 @@ export default function Projects() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              style={{ textDecoration: "none" }}
+              role="button"
+              tabIndex={0}
+              onClick={() => setSelectedProject(project)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelectedProject(project);
+                }
+              }}
             >
               <div className="project-thumb">
                 <FiFolder className="project-thumb-icon" />
@@ -78,7 +83,7 @@ export default function Projects() {
                   )}
                 </div>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </AnimatePresence>
       </motion.div>
